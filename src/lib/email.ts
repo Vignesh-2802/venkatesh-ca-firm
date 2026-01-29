@@ -8,18 +8,18 @@ interface EmailParams {
   name: string;
   email: string;
   phone: string;
-  service?: string;
   message: string;
+  service?: string;
   location?: string;
   timestamp: string;
-}
+} 
 
 export async function sendEmail(params: EmailParams) {
-  const { name, email, phone, service, message, location, timestamp } = params;
+  const { name, email, phone, message, service, location, timestamp } = params;
 
   if (!resend) {
     console.warn('Resend not configured - skipping email send');
-    console.log('Would have sent email with:', { name, email, phone, message, location, timestamp });
+    console.log('Would have sent email with:', { name, email, phone, message, service, location, timestamp });
     return { success: true, mock: true };
   }
 
@@ -73,14 +73,12 @@ export async function sendEmail(params: EmailParams) {
                 </p>
               </td>
             </tr>
-            ${service ? `
             <tr>
               <td style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
-                <span style="color: #64748b; font-size: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">🛠 Service</span>
-                <p style="margin: 4px 0 0 0; color: #1e293b; font-size: 16px; font-weight: 500;">${service}</p>
+                <span style="color: #64748b; font-size: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">🧾 Service</span>
+                <p style="margin: 4px 0 0 0; color: #1e293b; font-size: 16px; font-weight: 500;">${service || 'General Inquiry'}</p>
               </td>
             </tr>
-            ` : ''}
             ${location ? `
             <tr>
               <td style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
