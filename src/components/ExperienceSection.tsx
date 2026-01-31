@@ -44,11 +44,11 @@ const ExperienceSection = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white dark:from-slate-900 dark:via-slate-800/30 dark:to-slate-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/20 to-white dark:from-[#1e293b] dark:via-[#0f172a] dark:to-[#1e293b] transition-all duration-700" />
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/40 to-violet-100/40 dark:from-blue-900/10 dark:to-violet-900/10 rounded-full blur-3xl"
+          className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/30 to-violet-100/30 dark:from-blue-900/20 dark:to-violet-900/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -61,7 +61,7 @@ const ExperienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-100/80 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-200/50 dark:border-violet-500/20 mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/60 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-200/50 dark:border-violet-500/20 mb-6 backdrop-blur-xl shadow-lg shadow-violet-500/5">
             Professional Expertise
           </span>
           <h2 className="heading-lg gradient-text mb-4">

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 pt-24 pb-16">
+    <div className="min-h-screen service-page-bg pt-24 pb-16">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

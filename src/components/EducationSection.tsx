@@ -13,8 +13,8 @@ const EducationSection = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-white dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-900" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a] transition-all duration-700" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-300/50 dark:via-slate-700 to-transparent" />
       </div>
 
       <div className="section-container">
@@ -26,7 +26,7 @@ const EducationSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-blue-100/80 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-500/20 mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/60 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-500/20 mb-6 backdrop-blur-xl shadow-lg shadow-blue-500/5">
             Academic Background
           </span>
           <h2 className="heading-lg gradient-text mb-4">
@@ -81,7 +81,7 @@ const EducationSection = () => {
 
               {/* Timeline Dot */}
               <div className="absolute left-4 md:left-1/2 w-8 h-8 md:-translate-x-1/2 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-violet-500 ring-4 ring-white dark:ring-slate-900 shadow-lg" />
+                <div className="w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-violet-500 ring-4 ring-white dark:ring-[#0f172a] shadow-lg transition-all duration-500" />
               </div>
 
               {/* Spacer for alternating layout */}

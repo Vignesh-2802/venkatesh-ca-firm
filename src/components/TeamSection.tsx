@@ -26,14 +26,14 @@ const TeamSection = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-teal-50/30 to-white dark:from-slate-900 dark:via-slate-800/30 dark:to-slate-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-teal-50/20 to-slate-50 dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a] transition-all duration-700" />
         <motion.div
           animate={{ 
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-200/40 to-emerald-200/40 dark:from-teal-800/20 dark:to-emerald-800/20 rounded-full blur-3xl"
+          className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-teal-200/30 to-emerald-200/30 dark:from-teal-800/20 dark:to-emerald-800/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -46,7 +46,7 @@ const TeamSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-teal-100/80 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300 border border-teal-200/50 dark:border-teal-500/20 mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/60 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300 border border-teal-200/50 dark:border-teal-500/20 mb-6 backdrop-blur-xl shadow-lg shadow-teal-500/5">
             About Me
           </span>
           <h2 className="heading-lg gradient-text mb-4">
@@ -77,8 +77,12 @@ const TeamSection = () => {
                   className="relative"
                 >
                   <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-blue-500 via-violet-500 to-teal-500 p-1">
-                    <div className="w-full h-full rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                      <span className="text-6xl md:text-8xl font-bold gradient-text">VR</span>
+                    <div className="w-full h-full rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative">
+                      <img 
+                        src="/beepn.jpg" 
+                        alt="Venkatesh Ravi"
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
                   </div>
                   {/* Status badge */}
@@ -113,7 +117,7 @@ const TeamSection = () => {
                     {qualifications.map((qual) => (
                       <span
                         key={qual}
-                        className="px-3 py-1.5 rounded-full text-sm bg-blue-100/80 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-500/20"
+                        className="px-3 py-1.5 rounded-full text-sm bg-white/60 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-sm"
                       >
                         {qual}
                       </span>
@@ -130,7 +134,7 @@ const TeamSection = () => {
                     {expertise.map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1.5 rounded-full text-sm bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-600/50"
+                        className="px-3 py-1.5 rounded-full text-sm bg-slate-200/60 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-600/50 backdrop-blur-sm"
                       >
                         {item}
                       </span>

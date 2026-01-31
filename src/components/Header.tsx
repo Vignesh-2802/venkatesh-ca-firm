@@ -3,6 +3,7 @@
 import { useEffect, useState, useContext, createContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Logo from './Logo';
 
 // Safe theme hook that won't throw
 const useSafeTheme = () => {
@@ -94,13 +95,13 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-700/50 shadow-sm'
-          : 'bg-transparent'
+          ? 'py-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl backdrop-saturate-[180%] border-b border-white/20 dark:border-slate-700/30 shadow-[0_8px_32px_rgba(31,38,135,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)]'
+          : 'py-4 bg-transparent'
       }`}
     >
-      <nav className="section-container py-4 flex items-center justify-between">
+      <nav className="section-container flex items-center justify-between">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -109,9 +110,10 @@ const Header = () => {
         >
           <button
             onClick={() => scrollToSection('overview')}
-            className="text-xl md:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            VR
+            <Logo size="sm" animated={false} />
+            <span className="hidden sm:block text-lg font-bold gradient-text">Venkatesh Ravi</span>
           </button>
         </motion.div>
 
@@ -148,9 +150,9 @@ const Header = () => {
           {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, rotate: 15 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="w-10 h-10 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-xl flex items-center justify-center hover:bg-white/80 dark:hover:bg-slate-700/80 transition-all duration-300 border border-white/30 dark:border-slate-600/30 shadow-lg"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? (
@@ -173,7 +175,7 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="md:hidden w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="md:hidden w-10 h-10 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-xl flex items-center justify-center hover:bg-white/80 dark:hover:bg-slate-700/80 transition-all duration-300 border border-white/30 dark:border-slate-600/30 shadow-lg"
             aria-label="Toggle menu"
           >
             <svg className="w-5 h-5 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -247,14 +247,14 @@ const ContactForm = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/20 to-slate-50 dark:from-[#1e293b] dark:via-[#0f172a] dark:to-[#1e293b] transition-all duration-700" />
         <motion.div
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-200/50 to-violet-200/50 dark:from-blue-800/20 dark:to-violet-800/20 rounded-full blur-3xl"
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-200/30 to-violet-200/30 dark:from-blue-800/20 dark:to-violet-800/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -267,7 +267,7 @@ const ContactForm = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-emerald-100/80 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-500/20 mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/60 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-500/20 mb-6 backdrop-blur-xl shadow-lg shadow-emerald-500/5">
             Contact
           </span>
           <h2 className="heading-lg gradient-text mb-4">
@@ -305,7 +305,7 @@ const ContactForm = () => {
                   whileHover={{ x: 4 }}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-violet-500/10 dark:from-blue-500/20 dark:to-violet-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/60 dark:bg-gradient-to-br dark:from-blue-500/20 dark:to-violet-500/20 backdrop-blur-sm flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform border border-blue-200/30 dark:border-transparent shadow-lg shadow-blue-500/5">
                     {item.icon}
                   </div>
                   <div>
@@ -391,7 +391,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
                   />
                 </div>
 
@@ -408,7 +408,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
                   />
                 </div>
               </div>
@@ -427,7 +427,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     required
                     placeholder="+91 XXXXX XXXXX"
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
                   />
                 </div>
 
@@ -441,7 +441,7 @@ const ContactForm = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none cursor-pointer shadow-sm"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -466,7 +466,7 @@ const ContactForm = () => {
                   required
                   rows={5}
                   placeholder="Tell me about your requirements..."
-                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none shadow-sm"
                 />
               </div>
 
@@ -486,20 +486,20 @@ const ContactForm = () => {
 
               {/* Permission Status */}
               <div className="flex flex-wrap gap-3 text-xs">
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full ${
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm ${
                   locationStatus === 'granted' 
-                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                    ? 'bg-green-100/80 dark:bg-green-900/30 text-green-700 dark:text-green-400'
+                    : 'bg-white/60 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200/50 dark:border-transparent'
                 }`}>
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   </svg>
                   Location {locationStatus === 'granted' ? 'Enabled' : locationStatus === 'denied' ? 'Using IP' : 'Checking...'}
                 </span>
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full ${
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm ${
                   notificationEnabled 
-                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                    ? 'bg-green-100/80 dark:bg-green-900/30 text-green-700 dark:text-green-400'
+                    : 'bg-white/60 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200/50 dark:border-transparent'
                 }`}>
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
