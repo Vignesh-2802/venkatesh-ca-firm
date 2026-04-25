@@ -3,12 +3,12 @@ import { getBaseUrl } from '@/lib/seo';
 export async function GET() {
   const baseUrl = getBaseUrl();
 
-  const body = `# Venkatesh Ravi Chartered Accountant
+  const body = `# Venkatesh Financial Services
 
-> Official website for CA services in India.
+> Official website for VenkateshFinancialServices.com.
 
 ## Summary
-Venkatesh Ravi provides chartered accountant services including statutory audit, internal audit, GST compliance, tax planning, financial planning, and corporate advisory.
+Venkatesh Financial Services provides professional Chartered Accountant and financial advisory services, including statutory audit, internal audit, GST compliance, tax planning, financial planning, and corporate advisory for Indian businesses.
 
 ## Canonical site
 ${baseUrl}/
@@ -22,11 +22,18 @@ ${baseUrl}/
 - ${baseUrl}/services/financial-planning
 - ${baseUrl}/services/corporate-advisory
 
+## Brand keywords
+- Venkatesh CA
+- Venkatesh Financial Services
+- Venkatesh Ravi CA
+- enaktesh financialservice
+- Chartered Accountant India
+
 ## Contact
-- Email: contact@venkateshfirm.com
+- Email: contact@venkateshfinancialservices.com
 
 ## Crawl policy
-Use canonical URLs and the sitemap for indexing.
+Use canonical URLs, sitemap, and structured metadata for indexing.
 `;
 
   return new Response(body, {
