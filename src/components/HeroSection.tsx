@@ -169,13 +169,13 @@ const HeroSection = () => {
                 {/* Gradient border */}
                 <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-br from-blue-500 via-violet-500 to-teal-500">
                   <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
-                    <Image
+                    {/* <Image
                       src="/beepn.jpg"
                       alt="Venkatesh Ravi - Chartered Accountant"
                       fill
                       className="object-cover object-top"
                       priority
-                    />
+                    /> */}
                   </div>
                 </div>
 

@@ -78,11 +78,11 @@ const TeamSection = () => {
                 >
                   <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-blue-500 via-violet-500 to-teal-500 p-1">
                     <div className="w-full h-full rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative">
-                      <img 
+                      {/* <img 
                         src="/beepn.jpg" 
                         alt="Venkatesh Ravi"
                         className="w-full h-full object-cover object-top"
-                      />
+                      /> */}
                     </div>
                   </div>
                   {/* Status badge */}
