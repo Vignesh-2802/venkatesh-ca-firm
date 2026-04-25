@@ -1,0 +1,31 @@
+# Venkatesh Financial Services
+
+> Official website for VenkateshFinancialServices.com.
+
+## Summary
+Venkatesh Financial Services provides professional Chartered Accountant and financial advisory services, including statutory audit, internal audit, GST compliance, tax planning, financial planning, and corporate advisory for Indian businesses.
+
+## Canonical site
+https://venkateshfinancialservices.com/
+
+## Core pages
+- https://venkateshfinancialservices.com/
+- https://venkateshfinancialservices.com/services/statutory-audit
+- https://venkateshfinancialservices.com/services/internal-audit
+- https://venkateshfinancialservices.com/services/tax-planning
+- https://venkateshfinancialservices.com/services/gst-compliance
+- https://venkateshfinancialservices.com/services/financial-planning
+- https://venkateshfinancialservices.com/services/corporate-advisory
+
+## Brand keywords
+- Venkatesh CA
+- Venkatesh Financial Services
+- Venkatesh Ravi CA
+- enaktesh financialservice
+- Chartered Accountant India
+
+## Contact
+- Email: contact@venkateshfinancialservices.com
+
+## Crawl policy
+Use canonical URLs, sitemap, and structured metadata for indexing.
